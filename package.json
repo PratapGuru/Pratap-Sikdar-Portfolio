@@ -1,0 +1,27 @@
+{
+  "name": "2.-zenithmatrix-solutions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "20.10.0",
+    "npm": "10.4.0"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix front-end-part",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix front-end-part",
+    "dev": "concurrently \"npm run server\" \"npm run front-end-part\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front-end-part && npm run build --prefix front-end-part"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "framer-motion": "^11.0.28",
+    "mongoose": "^8.3.1",
+    "nodemon": "^3.1.0"
+  }
+}
